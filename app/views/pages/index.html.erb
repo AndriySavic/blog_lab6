@@ -1,12 +1,11 @@
-<center><%= link_to "Create new post", new_post_path, class: "btn btn-info" %>
+<center><p><%= link_to "Create new post", new_post_path, class: "btn btn-info" %>
+<%= link_to "Show Gallery", photos_path, class: "btn btn-info" %></p>
 <div class="posts">
-<% @posts.each do |post| %><br />
+<% @posts.each do |post| %>
 <hr>
-
-
 <h1><%= link_to post.title, post_path(post.id)%></h1>
 <p>
-	<%= image_tag post.user.avatar.url(:thumb), width: 50, height: 50 %>
+	<%= image_tag post.user.avatar.url(:thumb), width: 30, height: 30 %>
 	Author: <%= post.user.nickname%>  |   
     Create at: <%= post.created_at%>
 </p>

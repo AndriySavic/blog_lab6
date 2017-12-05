@@ -1,4 +1,4 @@
-<p><%= f.label :category %></p>
+<center><p><%= f.label :category %></p>
 <%= select_tag 'category_id', options_from_collection_for_select(Category.all, 'id', 'name') %>
 
 <p><%= f.label :name %></p>
@@ -7,4 +7,5 @@
 <p><%= f.label "Upload Photo" %></p>
 <%= f.file_field :photo %>
 
-<p><%= f.submit "Save"%></p>
+<p><%= f.submit "Save"%></p><br />
+</center>

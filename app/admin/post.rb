@@ -13,4 +13,5 @@ ActiveAdmin.register Post do
 # end
 
 permit_params :title, :body, :user_id
+
 end

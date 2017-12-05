@@ -1,40 +1,17 @@
 source 'https://rubygems.org'
 
+
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
-
-# user auth
+#registrtion
 gem 'devise'
-# admin user
+#admin panel
 gem 'activeadmin'
-# bootstrap
-gem 'bootstrap-sass'
-# jquery
+#CSS gem
+gem 'bootstrap-sass', '~> 3.3.7'
 gem 'jquery-rails'
-# user avatar
-gem "paperclip", "~> 5.0.0"
-
-
-
-
-
-
-
-gem 'client_side_validations'
-
-
-gem 'tinymce-rails'
-
-
-gem 'carrierwave', '~> 1.0'
-
-
-
-
-
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use sqlite3 as the database for Active Record
@@ -61,6 +38,15 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+#Peperclip for avatar
+gem "paperclip", "~> 5.0.0"
+
+gem 'client_side_validations'
+
+gem 'tinymce-rails'
+
+gem 'carrierwave', '~> 1.0'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -79,7 +65,6 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'sqlite3'
 end
-
 
 group :production do
   gem 'pg'
