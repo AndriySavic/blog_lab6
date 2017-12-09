@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 get 'photos/index'
 
-get 'postcomments/new'
 
 devise_for :admin_users, ActiveAdmin::Devise.config
 ActiveAdmin.routes(self)
@@ -18,5 +17,6 @@ member do
 get :vote
 end
 end
+resources :images
 
 end

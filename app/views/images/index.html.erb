@@ -1,0 +1,10 @@
+<p><%= link_to "Update new photo", new_photo_path, class: "btn btn-default"%></p>
+<p><%= link_to "Update multipart photo", new_image_path, class: "btn btn-default"%></p>
+<% if @images == [] %>
+<p>Image ninchen</p>
+<% else %>
+<% @images.each do |image| %>
+<p><%= image_tag(image.image.url, width: 300, height: 300)%></p>
+<p><b><%= image.user.nickname %></b></p>
+<% end %>
+<% end %>
